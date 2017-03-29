@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Menú</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <h3>Tareas Pendientes </h3>
+ <p>
+   Para eliminar una tarea dale click sobre el nombre y posteriormente presiona terminada.
+  </p>
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="showConfirm(item.num)">
+     <div item-left> {{item.num}}</div>
+     {{item.title}}
+    
+    </button>
+  </ion-list>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+</ion-content>

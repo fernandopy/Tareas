@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget id="com.admin.admintareas"
+        version="1.0.0" 
+        xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:gap   =    "http://phonegap.com/ns/1.0"
+        versionCode =   "1">
+
+  <name>Tareas</name>
+
+  <description>
+      Administración de Tareas 
+  </description>
+
+  <author href="https://pacifico.izt.uam.mx" email="fernando_estrada1028@hotmail.com">
+      Fernando Estrada Sandoval
+  </author>
+
+  <preference name="orientation" value="portrait" />
+  
+  
+  <plugin name="cordova-plugin-app-version">
+   <variable name="API_KEY_FOR_ANDROID" value="AIzaSyCLrg_PwjX2vi0prZyN1y-PuQHwRsUe3CQ" />
+</plugin>
+
+ <plugin name="cordova-plugin-camera" spec="~2.3.1" />
+
+  <platform name="android">
+    
+  </platform>
+
+  <platform name="winphone">
+   <!-- Una preferencia exclusiva para winphone -->
+  </platform>
+
+  <icon src="" width="120" height="120"/>
+
+ <preference name="phonegap-version" value="cli-6.3.0" />
+<allow-intent href="http://*/*" />
+<allow-intent href="https://*/*" />
+<allow-intent href="geo:*" />
+<access origin="content:///*" />
+<access origin="*"/>
+
+</widget>
+
