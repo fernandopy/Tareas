@@ -48,7 +48,7 @@ export class Page2 {
             var obj2 = JSON.parse('{"tipo":1,"fecha":"'+fecha+'","hora":"'+hora+'"}');
             var result = Object.assign({},datas,obj2);
             var datos = JSON.stringify(result);
-            this.http.post('http://192.168.1.71/conexion_mongo.php', datos , {headers: headers})
+            this.http.post('http://coral.izt.uam.mx/conexion_mongo.php', datos , {headers: headers})
               .map(res=>res.json())
               .subscribe(
                 data => console.log('respuesta '+JSON.stringify(data)),
