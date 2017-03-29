@@ -19,7 +19,7 @@ export class Page1 {
     let headers = new Headers();
     var obj2 = JSON.parse('{"tipo":2}');
     var datos = JSON.stringify(obj2);
-   	this.http.post('http://192.168.1.71/conexion_mongo.php', datos , {headers: headers})
+   	this.http.post('http://coral.izt.uam.mx/conexion_mongo.php', datos , {headers: headers})
     	.map(res=>res.json())
      	.subscribe(
       	data => {console.log('respuesta'),
@@ -68,7 +68,7 @@ export class Page1 {
           	var result = JSON.parse('{"tipo":3,"id":"'+id+'"}');
             var datos = JSON.stringify(result);
           	console.log(datos);
-            this.http.post('http://192.168.1.71/conexion_mongo.php', datos , {headers: headers})
+            this.http.post('http://coral.izt.uam.mx/conexion_mongo.php', datos , {headers: headers})
               .map(res=>res.json())
               .subscribe(
                 data => console.log('respu '+JSON.stringify(data)),
